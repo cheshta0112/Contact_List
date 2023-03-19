@@ -5,15 +5,10 @@ A simple Web Application of saving Contacts .
 # Made using -
 
 HTML
-
 CSS
-
 JAVASCRIPT
-
 Node Js
-
 Express
-
 MongoDB
 
 # SCREENSHOT
