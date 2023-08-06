@@ -1,0 +1,15 @@
+{
+  "name": "contact_list",
+  "version": "1.0.0",
+  "description": "my contact list ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cheshta pal",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
