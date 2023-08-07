@@ -1,18 +1,43 @@
 <html>
-  <head> </head>
-  <title><%= locals.title %></title>
+  <head>
+    <title><%= locals.title%></title>
+    <script
+      src="https://kit.fontawesome.com/c00ae0a2ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
 
   <body>
-    <h1>Contact List</h1>
+    <h1><i class="fa-regular fa-address-book"></i> Contact List</h1>
+
+    <!--<h3>Create New Contact </h3>-->
+
+    <form action="/create-contact" method="POST">
+      <input type="text" name="name" placeholder="Enter name" required />
+      <input type="number" name="phone" placeholder="Enter phone" required />
+      <button type="submit">Add contact</button>
+    </form>
+
+    <div id="contact_container">
+      <ul>
+        <% for (let i of contact_list) { %>
+        <div class="contact">
+          <li>
+            <p><%= i.name %></p>
+            <p><%= i.phone %></p>
+            <p class="delete-button">
+              <a href="/delete-contact/?id=<%= i.id %>">
+                <i
+                  class="fa-solid fa-trash-can"
+                  style="color: rgb(34, 35, 35)"
+                ></i>
+              </a>
+            </p>
+          </li>
+        </div>
+        <% } %>
+      </ul>
+    </div>
   </body>
-  <div>
-    <ul>
-      <% for (let i of contact_list) { %>
-      <li>
-        <P><%= i.name %> </P>
-        <p><%= i.phone %></p>
-      </li>
-      <% } %>
-    </ul>
-  </div>
 </html>
